@@ -79,9 +79,40 @@
     <h3>What have I done...</h3>
 	<p>
 	Now I'm learning sth. about inputs and outputs. Last time I made an idiotically stupid thing. Its arm shakes when it hears sound.</p>
-    <img>
+    
+        <video width="320" height="240" controls>
+    <source src="media/final/finalVideo.mp4" type="video/mp4">
 
-    </div> <!-- /container -->
+        </video>
+    <p>See, It's sooooo weird that it even got on the news! Oh!I seemed to forgot to say what are we learning. We've just learned about what are inputs and outputs.How do they work.Digital and analog sensors, and a type of motor,which I have used to make that stupid machiene.</p>
+        <p>check out my code</p>
+        
+        	<pre class="prettyprint linenums">
+
+#include <Servo.h>
+
+Servo blues; 
+
+int degree = 0;
+int rotation = 0;
+void setup() {
+  blues.attach(9);  // attaches the servo on pin 9 to the servo object
+}
+
+void loop() {
+ rotation = analogRead(A0);
+ degree = map(rotation,0,1023,0,500);
+blues.write(degree);
+delay(20);
+
+}
+    
+    </pre>
+<p>download it</p>
+<a href="media/ex4/">
+	<button type="button" class="btn btn-primary btn-lg">Download the file</button>
+	</a>
+</div> <!-- /container -->
 
 	<!-- footer -->
     
